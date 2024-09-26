@@ -63,7 +63,7 @@ The .whl files of causal_conv1d and mamba_ssm could be found here. {[Baidu](http
 
 
 
-## 3. Train the VM-UNet
+## 3. Train the CaVMamba
 
 ```bash
 cd CaVMamba
