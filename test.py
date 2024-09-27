@@ -12,12 +12,12 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 
 from configs.config_setting_synapse import setting_config
-from models.vmunet.vmunet import VMUNet
+from models.cavmunet.CaVMamba import CaVMamba
 from utils import test_single_volume
 
 
 def inference(args, model, test_save_path=None):
-    db_test = args.datasets(base_dir='/home/star/xzy/VM-UNet-main/data/Synapse/test2', split="test_vol", list_dir='/home/star/xzy/VM-UNet-main/data/Synapse/test2/')
+    db_test = args.datasets(base_dir='', split="test_vol", list_dir='')
 
     testloader = DataLoader(db_test, batch_size=1, shuffle=False, num_workers=1)
     logging.info("{} test iterations per epoch".format(len(testloader)))
@@ -55,9 +55,9 @@ if __name__ == "__main__":
     torch.cuda.manual_seed(args.seed)
 
 
-    snapshot_path = '/home/star/xzy/VM-UNet-main2/VM-UNet-main/results/vmunet_synapse_Friday_24_May_2024_10h_12m_57s/checkpoints/best-epoch299-mean_dice0.8037-mean_hd9520.0228.pth'
+    snapshot_path = ''
 
-    net = VMUNet(
+    net = CaVMamba(
         num_classes=9,
         input_channels=3,
         depths=[2, 2, 2, 1],
