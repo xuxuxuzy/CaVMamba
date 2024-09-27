@@ -1,12 +1,12 @@
 # CaVMamba
 
-
+This is the official code of CaVMamba.
 
 ## 0. Main Environments
 
 ```bash
-conda create -n cavmunet python=3.8
-conda activate cavmunet
+conda create -n cavmamba python=3.8
+conda activate cavmamba
 pip install torch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
 pip install packaging
 pip install timm==0.4.12
@@ -69,10 +69,14 @@ cd CaVMamba
 python train.py  # Train and test CaVMamba on the ISIC17 or ISIC18 dataset.
 python train_synapse.py  # Train and test CaVMamba on the Synapse dataset.
 ```
-## 4. Obtain the outputs
+## 4. Test the CaVMamba
+
+python test.py
+
+## 5. Obtain the outputs
 
 - After trianing, you could obtain the results in './results/'
 
-## 5. Acknowledgments
+## 6. Acknowledgments
 
 - We thank the authors of [VMamba](https://github.com/MzeroMiko/VMamba) and [Swin-UNet](https://github.com/HuCaoFighting/Swin-Unet)and VMUNet(https://github.com/JCruan519/VM-UNet) for their open-source codes.
