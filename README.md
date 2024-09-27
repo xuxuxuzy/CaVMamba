@@ -62,7 +62,6 @@ The .whl files of causal_conv1d and mamba_ssm could be found here. {[Baidu](http
 - The weights of the pre-trained VMamba could be downloaded [here](https://github.com/MzeroMiko/VMamba) or [Baidu](https://pan.baidu.com/s/1ci_YvPPEiUT2bIIK5x8Igw?pwd=wnyy). After that, the pre-trained weights should be stored in './pretrained_weights/'.
 
 
-
 ## 3. Train the CaVMamba
 
 ```bash
@@ -70,7 +69,6 @@ cd CaVMamba
 python train.py  # Train and test CaVMamba on the ISIC17 or ISIC18 dataset.
 python train_synapse.py  # Train and test CaVMamba on the Synapse dataset.
 ```
-
 ## 4. Obtain the outputs
 
 - After trianing, you could obtain the results in './results/'
